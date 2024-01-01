@@ -3,7 +3,7 @@
 #Copyright (c) 2022, FourCastNet authors
 #All rights reserved.
 #
-#Redistribution and use in source  or without
+#Redistribut   ion and use in source  or without
 #modification, are permitted provided that the following conditions are met:
 #
 #1. Redistributions of source code must retain the above copyright notice, this
