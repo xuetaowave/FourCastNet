@@ -117,7 +117,7 @@ class GetDataset(Dataset):
         logging.info("Getting file stats from {}".format(self.files_paths[0]))
         self.n_samples_per_year = _f['fields'].shape[0]
         #original image shape (before padding)
-        self.img_shape_x = _f['fields'].shape[2] -1#just get rid of one of the pixels
+        self.img_shape_x = _f['fields'].shape[2]#just get rid of one of the pixels
         self.img_shape_y = _f['fields'].shape[3]
 
     self.n_samples_total = self.n_years * self.n_samples_per_year

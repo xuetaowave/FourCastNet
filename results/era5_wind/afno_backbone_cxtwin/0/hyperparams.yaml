@@ -1,7 +1,7 @@
 log_to_wandb: 'True'
 lr: '0.0005'
-batch_size: '2'
-max_epochs: '150'
+batch_size: '16'
+max_epochs: '1500'
 scheduler: CosineAnnealingLR
 in_channels: '[0 1 2 3 4 5]'
 out_channels: '[0 1 2 3 4 5]'
@@ -55,7 +55,7 @@ checkpoint_path:
   /mnt/data/work/FourCastNet/results/era5_wind/afno_backbone_cxtwin/0/training_checkpoints/ckpt.tar
 best_checkpoint_path: 
   /mnt/data/work/FourCastNet/results/era5_wind/afno_backbone_cxtwin/0/training_checkpoints/best_ckpt.tar
-resuming: 'False'
+resuming: 'True'
 local_rank: '0'
 enable_amp: 'True'
 name: afno_backbone_cxtwin_0

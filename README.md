@@ -84,7 +84,7 @@ stats_v0
 
 ```
 
-Training configurations can be set up in [config/AFNO.yaml](config/AFNO.yaml). The following paths need to be set by the user. These paths should point to the data and stats you downloaded in the steps above:
+Training configurations can be set up in [config/AFNO.yaml](config/AFNO.bak.yaml). The following paths need to be set by the user. These paths should point to the data and stats you downloaded in the steps above:
 
 ```
 afno_backbone: &backbone
@@ -143,7 +143,7 @@ stats_v0
 
 Once you have all the file listed above you should be ready to go.
 
-In [config/AFNO.yaml](config/AFNO.yaml), set the user defined paths
+In [config/AFNO.yaml](config/AFNO.bak.yaml), set the user defined paths
 
 ```
 afno_backbone: &backbone

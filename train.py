@@ -88,7 +88,7 @@ class Trainer():
     self.device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
 
     if params.log_to_wandb:
-      wandb.init(config=params, name=params.name, group=params.group, project=params.project, entity=params.entity)
+      wandb.init(config=params, name=params.name, group=params.group, project=params.project)
 
     logging.info('rank %d, begin data loader init'%world_rank)
     self.train_data_loader, self.train_dataset, self.train_sampler = get_data_loader(params, params.train_data_path, dist.is_initialized(), train=True)
@@ -533,7 +533,7 @@ class Trainer():
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument("--run_num", default='00', type=str)
-  parser.add_argument("--yaml_config", default='./config/AFNO.yaml', type=str)
+  parser.add_argument("--yaml_config", default='./config/AFNO.bak.yaml', type=str)
   parser.add_argument("--config", default='default', type=str)
   parser.add_argument("--enable_amp", action='store_true')
   parser.add_argument("--epsilon_factor", default = 0, type = float)

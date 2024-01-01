@@ -172,7 +172,8 @@ class AFNONet(nn.Module):
     def __init__(
             self,
             params,
-            img_size=(720, 1440),
+            # img_size=(720, 1440), modified by cxt 2023.12.31
+            img_size=(192, 288),
             patch_size=(16, 16),
             in_chans=2,
             out_chans=2,
