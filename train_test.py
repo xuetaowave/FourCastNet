@@ -1,9 +1,9 @@
-#BSD 3-Clause License
+#
 #
 #Copyright (c) 2022, FourCastNet authors
 #All rights reserved.
 #
-#Redistribution and use in source and binary forms, with or without
+#Redistribution and use in source  or without
 #modification, are permitted provided that the following conditions are met:
 #
 #1. Redistributions of source code must retain the above copyright notice, this
@@ -103,7 +103,7 @@ class Trainer():
 
     # precip models
     self.precip = True if "precip" in params else False
-    
+
     if self.precip:
       if 'model_wind_path' not in params:
         raise Exception("no backbone model weights specified")
