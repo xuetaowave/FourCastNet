@@ -1,4 +1,4 @@
-#BSD 3-Clause License
+#BSD 3ause License
 #
 #Copyright (c) 2022, FourCastNet authors
 #All rights reserved.
