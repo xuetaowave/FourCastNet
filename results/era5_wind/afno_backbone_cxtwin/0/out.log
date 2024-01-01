@@ -1,0 +1,85 @@
+2023-12-31 18:37:09,432 - root - INFO - --------------- Versions ---------------
+2023-12-31 18:37:09,440 - root - INFO - git branch: b'* master'
+2023-12-31 18:37:09,445 - root - INFO - git hash: b'93360c1720a9f97aabf970689f21c9fad8737788'
+2023-12-31 18:37:09,445 - root - INFO - Torch: 2.1.2+cu118
+2023-12-31 18:37:09,445 - root - INFO - ----------------------------------------
+2023-12-31 18:37:09,445 - root - INFO - ------------------ Configuration ------------------
+2023-12-31 18:37:09,445 - root - INFO - Configuration file: /mnt/data/work/FourCastNet/config/AFNO.yaml
+2023-12-31 18:37:09,445 - root - INFO - Configuration name: afno_backbone_cxtwin
+2023-12-31 18:37:09,445 - root - INFO - log_to_wandb True
+2023-12-31 18:37:09,445 - root - INFO - lr 0.0005
+2023-12-31 18:37:09,445 - root - INFO - batch_size 2
+2023-12-31 18:37:09,445 - root - INFO - max_epochs 150
+2023-12-31 18:37:09,445 - root - INFO - scheduler CosineAnnealingLR
+2023-12-31 18:37:09,445 - root - INFO - in_channels [0, 1, 2, 3, 4, 5]
+2023-12-31 18:37:09,445 - root - INFO - out_channels [0, 1, 2, 3, 4, 5]
+2023-12-31 18:37:09,445 - root - INFO - orography False
+2023-12-31 18:37:09,445 - root - INFO - orography_path None
+2023-12-31 18:37:09,445 - root - INFO - exp_dir /mnt/data/work/FourCastNet/results/era5_wind
+2023-12-31 18:37:09,445 - root - INFO - train_data_path /mnt/data/work/FourCastNet/data_nowcasting/train
+2023-12-31 18:37:09,445 - root - INFO - valid_data_path /mnt/data/work/FourCastNet/data_nowcasting/test
+2023-12-31 18:37:09,445 - root - INFO - inf_data_path /mnt/data/work/FourCastNet/data_nowcasting/out_of_sample
+2023-12-31 18:37:09,445 - root - INFO - time_means_path /mnt/data/work/FourCastNet/data_nowcasting/time_means.npy
+2023-12-31 18:37:09,446 - root - INFO - global_means_path /mnt/data/work/FourCastNet/data_nowcasting/global_means.npy
+2023-12-31 18:37:09,446 - root - INFO - global_stds_path /mnt/data/work/FourCastNet/data_nowcasting/global_stds.npy
+2023-12-31 18:37:09,446 - root - INFO - loss l2
+2023-12-31 18:37:09,446 - root - INFO - num_data_workers 4
+2023-12-31 18:37:09,446 - root - INFO - dt 1
+2023-12-31 18:37:09,446 - root - INFO - n_history 0
+2023-12-31 18:37:09,446 - root - INFO - prediction_type iterative
+2023-12-31 18:37:09,446 - root - INFO - prediction_length 41
+2023-12-31 18:37:09,446 - root - INFO - n_initial_conditions 5
+2023-12-31 18:37:09,446 - root - INFO - ics_type default
+2023-12-31 18:37:09,446 - root - INFO - save_raw_forecasts True
+2023-12-31 18:37:09,446 - root - INFO - save_channel False
+2023-12-31 18:37:09,446 - root - INFO - masked_acc False
+2023-12-31 18:37:09,446 - root - INFO - maskpath None
+2023-12-31 18:37:09,446 - root - INFO - perturb False
+2023-12-31 18:37:09,446 - root - INFO - add_grid False
+2023-12-31 18:37:09,446 - root - INFO - N_grid_channels 0
+2023-12-31 18:37:09,446 - root - INFO - gridtype sinusoidal
+2023-12-31 18:37:09,446 - root - INFO - roll False
+2023-12-31 18:37:09,446 - root - INFO - num_blocks 8
+2023-12-31 18:37:09,446 - root - INFO - nettype afno
+2023-12-31 18:37:09,446 - root - INFO - patch_size 8
+2023-12-31 18:37:09,446 - root - INFO - width 56
+2023-12-31 18:37:09,446 - root - INFO - modes 32
+2023-12-31 18:37:09,446 - root - INFO - target default
+2023-12-31 18:37:09,446 - root - INFO - normalization zscore
+2023-12-31 18:37:09,446 - root - INFO - log_to_screen True
+2023-12-31 18:37:09,446 - root - INFO - save_checkpoint True
+2023-12-31 18:37:09,447 - root - INFO - enable_nhwc False
+2023-12-31 18:37:09,447 - root - INFO - optimizer_type FusedAdam
+2023-12-31 18:37:09,447 - root - INFO - crop_size_x None
+2023-12-31 18:37:09,447 - root - INFO - crop_size_y None
+2023-12-31 18:37:09,447 - root - INFO - two_step_training False
+2023-12-31 18:37:09,447 - root - INFO - plot_animations False
+2023-12-31 18:37:09,447 - root - INFO - add_noise False
+2023-12-31 18:37:09,447 - root - INFO - noise_std 0
+2023-12-31 18:37:09,447 - root - INFO - epsilon_factor 0
+2023-12-31 18:37:09,447 - root - INFO - world_size 1
+2023-12-31 18:37:09,447 - root - INFO - experiment_dir /mnt/data/work/FourCastNet/results/era5_wind/afno_backbone_cxtwin/0
+2023-12-31 18:37:09,447 - root - INFO - checkpoint_path /mnt/data/work/FourCastNet/results/era5_wind/afno_backbone_cxtwin/0/training_checkpoints/ckpt.tar
+2023-12-31 18:37:09,447 - root - INFO - best_checkpoint_path /mnt/data/work/FourCastNet/results/era5_wind/afno_backbone_cxtwin/0/training_checkpoints/best_ckpt.tar
+2023-12-31 18:37:09,447 - root - INFO - resuming False
+2023-12-31 18:37:09,447 - root - INFO - local_rank 0
+2023-12-31 18:37:09,447 - root - INFO - enable_amp True
+2023-12-31 18:37:09,447 - root - INFO - name afno_backbone_cxtwin_0
+2023-12-31 18:37:09,447 - root - INFO - group era5_precipafno_backbone_cxtwin
+2023-12-31 18:37:09,447 - root - INFO - project ERA5_precip
+2023-12-31 18:37:09,447 - root - INFO - entity flowgan
+2023-12-31 18:37:09,447 - root - INFO - ---------------------------------------------------
+2023-12-31 18:37:13,301 - root - INFO - rank 0, begin data loader init
+2023-12-31 18:37:28,105 - root - INFO - Getting file stats from /mnt/data/work/FourCastNet/data_nowcasting/train/2010.h5
+2023-12-31 18:37:28,106 - root - INFO - Number of samples per year: 130
+2023-12-31 18:37:28,106 - root - INFO - Found data at path /mnt/data/work/FourCastNet/data_nowcasting/train. Number of examples: 130. Image Shape: 192 x 288 x 6
+2023-12-31 18:37:28,106 - root - INFO - Delta t: 6 hours
+2023-12-31 18:37:28,107 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-12-31 18:37:28,107 - root - INFO - Getting file stats from /mnt/data/work/FourCastNet/data_nowcasting/test/2010.h5
+2023-12-31 18:37:28,108 - root - INFO - Number of samples per year: 30
+2023-12-31 18:37:28,108 - root - INFO - Found data at path /mnt/data/work/FourCastNet/data_nowcasting/test. Number of examples: 30. Image Shape: 192 x 288 x 6
+2023-12-31 18:37:28,108 - root - INFO - Delta t: 6 hours
+2023-12-31 18:37:28,108 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-12-31 18:37:28,109 - root - INFO - rank 0, data loader initialized
+2023-12-31 18:37:29,082 - root - INFO - Number of trainable model parameters: 73315584
+2023-12-31 18:37:29,082 - root - INFO - Starting Training Loop...

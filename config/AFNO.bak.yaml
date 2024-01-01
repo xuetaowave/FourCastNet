@@ -59,88 +59,24 @@ full_field: &FULL_FIELD
   add_noise: !!bool False
   noise_std: 0
 
-
-afno_backbone_cxtwin: &backbone_cxtwin
-  <<: *FULL_FIELD
-  log_to_wandb: !!bool True
-  lr: 5E-4
-  batch_size: 2
-  max_epochs: 150
-  scheduler: 'CosineAnnealingLR'
-#  in_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-#  out_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-  in_channels: [0, 1, 2, 3, 4, 5]
-  out_channels: [0, 1, 2, 3, 4, 5]
-  orography: !!bool False
-  orography_path: None
-  exp_dir: '/mnt/g/work/FourCastNet_nowcasting/results/era5_wind'
-  train_data_path: '/mnt/g/work/FourCastNet_nowcasting/data_nowcasting/train'
-  valid_data_path: '/mnt/g/work/FourCastNet_nowcasting/data_nowcasting/test'
-  inf_data_path:   '/mnt/g/work/FourCastNet_nowcasting/data_nowcasting/out_of_sample'
-  time_means_path:   '/mnt/g/work/FourCastNet_nowcasting/data_nowcasting/time_means.npy'
-  global_means_path: '/mnt/g/work/FourCastNet_nowcasting/data_nowcasting/global_means.npy'
-  global_stds_path:  '/mnt/g/work/FourCastNet_nowcasting/data_nowcasting/global_stds.npy'
-
-afno_backbone_cxt: &backbone_cxt
-  <<: *FULL_FIELD
-  log_to_wandb: !!bool True
-  lr: 5E-4
-  batch_size: 2
-  max_epochs: 150
-  scheduler: 'CosineAnnealingLR'
-#  in_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-#  out_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-  in_channels: [0, 1, 2, 3, 4, 5]
-  out_channels: [0, 1, 2, 3, 4, 5]
-  orography: !!bool False
-  orography_path: None
-  exp_dir: '/mnt/data/work/FourCastNet_linux/results/era5_wind'
-  train_data_path: '/mnt/data/work/FourCastNet_linux/data_nowcasting/train'
-  valid_data_path: '/mnt/data/work/FourCastNet_linuxdata_nowcasting/test'
-  inf_data_path:   '/mnt/data/work/FourCastNet_linux/data_nowcasting/out_of_sample'
-  time_means_path:   '/mnt/data/work/FourCastNet_linux/data_nowcasting/time_means.npy'
-  global_means_path: '/mnt/data/work/FourCastNet_linux/data_nowcasting/global_means.npy'
-  global_stds_path:  '/mnt/data/work/FourCastNet_linux/data_nowcasting/global_stds.npy'
-
-afno_backbone_nowcasting:
-  <<: *FULL_FIELD
-  log_to_wandb: !!bool True
-  lr: 5E-4
-  batch_size: 2
-  max_epochs: 150
-  scheduler: 'CosineAnnealingLR'
-#  in_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-#  out_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-  in_channels: [0]
-  out_channels: [0]
-  orography: !!bool False
-  orography_path: None
-  exp_dir: '/mnt/data/work/FourCastNet/results/nowcasting'
-  train_data_path: '/mnt/data/work/FourCastNet/data_nowcasting/train'
-  valid_data_path: '/mnt/data/work/FourCastNet/data_nowcasting/test'
-  inf_data_path:   '/mnt/data/work/FourCastNet/data_nowcasting/out_of_sample'
-  time_means_path:   '/mnt/data/work/FourCastNet/data_nowcasting/time_means.npy'
-  global_means_path: '/mnt/data/work/FourCastNet/data_nowcasting/global_means.npy'
-  global_stds_path:  '/mnt/data/work/FourCastNet/data_nowcasting/global_stds.npy'
-
 afno_backbone: &backbone
   <<: *FULL_FIELD
   log_to_wandb: !!bool True
   lr: 5E-4
-  batch_size: 64
+  batch_size: 2
   max_epochs: 150
   scheduler: 'CosineAnnealingLR'
   in_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
   out_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
   orography: !!bool False
-  orography_path: None 
-  exp_dir: '/pscratch/sd/s/shas1693/results/era5_wind'
-  train_data_path: '/pscratch/sd/s/shas1693/data/era5/train'
-  valid_data_path: '/pscratch/sd/s/shas1693/data/era5/test'
-  inf_data_path:   '/pscratch/sd/s/shas1693/data/era5/out_of_sample'
-  time_means_path:   '/pscratch/sd/s/shas1693/data/era5/time_means.npy'
-  global_means_path: '/pscratch/sd/s/shas1693/data/era5/global_means.npy'
-  global_stds_path:  '/pscratch/sd/s/shas1693/data/era5/global_stds.npy'
+  orography_path: None
+  exp_dir: '/mnt/data/work/FourCastNet/results/nowcasting'
+  train_data_path: '/mnt/data/work/FourCastNet/data/train'
+  valid_data_path: '/mnt/data/work/FourCastNet/data/test'
+  inf_data_path: '/mnt/data/work/FourCastNet/data/out_of_sample'
+  time_means_path: '/mnt/data/work/FourCastNet/data/time_means.npy'
+  global_means_path: '/mnt/data/work/FourCastNet/data/global_means.npy'
+  global_stds_path: '/mnt/data/work/FourCastNet/data/global_stds.npy'
 
 afno_backbone_orography: &backbone_orography 
   <<: *backbone
